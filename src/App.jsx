@@ -39,7 +39,8 @@ function App() {
             <TabButtons onSelect={() => handleClick('state')}>State</TabButtons>
           </menu>
         </section>
-        {!selectedTopic ? ( <p>Please select a topic</p> ) : (
+        {!selectedTopic && ( <p>Please select a topic</p> ) }
+        {selectedTopic && (
           <div id="tab-content">
             <h3>{EXAMPLES[selectedTopic].title}</h3>
             <p>{EXAMPLES[selectedTopic].description}</p>
