@@ -80,3 +80,67 @@ function Counter() {
 }`,
   },
 };
+
+export const ANOTHERTABS = {
+    tabcomp: {
+      tit: 'Components1',
+      desc:
+        'Components are the building blocks of React applications. A component is a self-contained module (HTML + optional CSS + JS) that renders some output.',
+      cod: `
+  function Welcome() {
+    return <h1>Hello, World!</h1>;
+  }`,
+    },
+    tabprop: {
+        tit: 'JSX2',
+        desc:
+        'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
+      cod: `
+  <div>
+    <h1>Welcome {userName}</h1>
+    <p>Time to learn React!</p>
+  </div>`,
+    },
+    tabstate: {
+      tit: 'Props3',
+      desc:
+        'Components accept arbitrary inputs called props. They are like function arguments.',
+      cod: `
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }`,
+    },
+
+  };
+
+  export const TABSMENU = {
+    tabmenucomp: {
+      tilt: 'Components',
+      desce:
+        'Components are the building blocks of React applications. A component is a self-contained module (HTML + optional CSS + JS) that renders some output.',
+      codee: `
+  function Welcome() {
+    return <h1>Hello, World!</h1>;
+  }`,
+    },
+    tabmenuprop: {
+        tilt: 'JSX',
+        desce:
+        'JSX is a syntax extension to JavaScript. It is similar to a template language, but it has full power of JavaScript (e.g., it may output dynamic content).',
+      codee: `
+  <div>
+    <h1>Welcome {userName}</h1>
+    <p>Time to learn React!</p>
+  </div>`,
+    },
+    tabmenustate: {
+      tilt: 'Props',
+      desce:
+        'Components accept arbitrary inputs called props. They are like function arguments.',
+      codee: `
+  function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+  }`,
+    },
+
+  };
