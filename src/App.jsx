@@ -5,14 +5,13 @@ import Examples from './components/Examples.jsx';
 
 function App() {
   return (
-    <div>
+    <>
       <Header></Header>
       <main>
         <CoreConcepts />
         <Examples />
-
       </main>
-    </div>
+    </>
   );
 }
 
