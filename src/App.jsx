@@ -1,18 +1,13 @@
- import { useState } from 'react'; 
+import { useState } from 'react'; 
 import Header from '../src/components/Header/Header.jsx';
 import { CORE_CONCEPTS } from '../src/data.jsx';
 import CoreConcepts from '../src/components/CoreConcepts.jsx';
 import TabButtons from './components/TabButtons.jsx';
 import { EXAMPLES } from '../src/data.jsx';
-import Tabs from './components/Tabs.jsx';
-import { ANOTHERTABS } from '../src/data.jsx';
-import TabsMenu from './components/TabsMenu.jsx';
-import { TABSMENU } from '../src/data.jsx';
+
 
 function App() {
   const [selectedTopic, setSelectedTopic] = useState();
-  const [selectedItem, setselectedItem] = useState();
-  const [selectMenu, setselectMenu] = useState()
 
   function handleClick(selectedButton){
     setSelectedTopic(selectedButton);
@@ -20,14 +15,6 @@ function App() {
   }
 
   
-  function clickHandle(selectedTabName){
-    setselectedItem(selectedTabName)
-    console.log(selectedTabName);
-  }
-
-  function clickMenu(selectedTabMenu){
-    setselectMenu(selectedTabMenu)
-  }
 
   return (
     <div>
@@ -88,69 +75,7 @@ function App() {
             </pre>
           </div>
         )}
-        <div>
-          <h2>Another Examples</h2>
-          <menu>
-            <Tabs 
-              isSelect={selectedItem === 'tabcomp'}
-              onSelect={ () => clickHandle('tabcomp')}
-              >
-              Tab1
-            </Tabs>
-            <Tabs 
-              isSelect={selectedItem === 'tabprop'}
-              onSelect={ () => clickHandle('tabprop')}
-              >
-                Tab2
-              </Tabs>
-            <Tabs 
-              isSelect={selectedItem === 'tabstate'}
-              onSelect={ () => clickHandle('tabstate')}
-              >
-                Tab3
-            </Tabs>
-          </menu>
-        </div>
-        {!selectedItem && ( <p>Hello Click on Tab</p> ) }
-        {selectedItem && (
-          <div class="tab-content">
-            <h3>{ANOTHERTABS[selectedItem].tit}</h3>
-            <p>{ANOTHERTABS[selectedItem].desc}</p>
-            <pre>
-              <code>{ANOTHERTABS[selectedItem].cod}</code>
-            </pre>
-          </div>
-        )}
-        <div class="tabs-menu">
-          <menu>
-          <TabsMenu 
-            isSelectt={selectMenu === 'tabmenucomp'}
-            onSelect={() => clickMenu('tabmenucomp')}
-          >
-            Menu1
-          </TabsMenu>
-          <TabsMenu 
-            isSelectt={selectMenu === 'tabmenuprop'}
-            onSelect={() => clickMenu('tabmenuprop')}
-          >
-              Menu2
-            </TabsMenu>
-          <TabsMenu 
-            isSelectt={selectMenu === 'tabmenustate'}
-            onSelect={() => clickMenu('tabmenustate')}
-          >
-              Menu3
-          </TabsMenu>
-          </menu>
-          {!selectMenu && ( <p>Please select Menu</p> ) }
-          {selectMenu && (
-            <div class="dynamic-menu">
-              <h3>{TABSMENU[selectMenu].tilt}</h3>
-              <p>{TABSMENU[selectMenu].desce}</p>
-              <pre>{TABSMENU[selectMenu].codee}</pre>
-              </div>
-          )}
-        </div>
+        
       </main>
     </div>
   );
